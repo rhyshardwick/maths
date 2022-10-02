@@ -4,6 +4,7 @@
 # 3) read second number (n) and remove every nth number
 # 4) repeat
 
+
 CalculateUntil = int(input("Calulate Lucky numbers up until: "))
 
 LuckyNumbers = [1]
