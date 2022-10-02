@@ -6,5 +6,13 @@
 
 CalculateUntil = int(input("Calulate Lucky numbers up until: "))
 
-LuckyNumberes = [1]
+LuckyNumbers = [1]
 
+i = 2
+while i <= CalculateUntil:
+	LuckyNumbers.append(i)
+	i += 1
+
+
+
+print(LuckyNumbers)
