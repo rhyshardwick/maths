@@ -6,14 +6,26 @@
 
 
 CalculateUntil = int(input("Calulate Lucky numbers up until: "))
+# Factor to calculate until to ensure we have enough terms after removal
+lengthFactor = 3
+# Generate a list of integers three times size of CalculateUntil
 
 LuckyNumbers = [1]
-
 i = 2
-while i <= CalculateUntil:
+while i <= (CalculateUntil * lengthFactor):
 	LuckyNumbers.append(i)
 	i += 1
 
+nthterm = 2
+i = 1
+while nthterm < (CalculateUntil * lengthFactor):
+	
 
 
-print(LuckyNumbers)
+
+# Print out numbers
+
+n = 0
+while n < CalculateUntil:
+	print(n + 1, ":", LuckyNumbers[n])
+	n += 1
