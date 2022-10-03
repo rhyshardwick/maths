@@ -5,27 +5,19 @@
 # 4) repeat
 
 
-CalculateUntil = int(input("Calulate Lucky numbers up until: "))
-# Factor to calculate until to ensure we have enough terms after removal
-lengthFactor = 3
-# Generate a list of integers three times size of CalculateUntil
+n = int(input("Calulate Lucky numbers up until: "))
 
-LuckyNumbers = [1]
-i = 2
-while i <= (CalculateUntil * lengthFactor):
-	LuckyNumbers.append(i)
+# Generate a list of integers
+
+luckyNumbers = range(-1, n*n+9, 2) # creates a list of odd numbers from 1 to n squared + 9
+
+i = 2 # start with third term	
+while luckyNumbers[i:]: # cycle through from nth term to end
+	luckyNumbers = sorted(set(luckyNumbers) - set(luckyNumbers[luckyNumbers[i]::luckyNumbers[i]]))
 	i += 1
 
-nthterm = 2
-i = 1
-while nthterm < (CalculateUntil * lengthFactor):
-	
-
-
-
 # Print out numbers
-
-n = 0
-while n < CalculateUntil:
-	print(n + 1, ":", LuckyNumbers[n])
-	n += 1
+a = 1
+while a <= n:
+	print(a, ":", luckyNumbers[a])
+	a += 1
